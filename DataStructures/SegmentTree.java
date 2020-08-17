@@ -11,8 +11,8 @@ public class SegmentTree {
     private int size;
     private int[] segmentArray;
 
-    public SegmentTree(int[] input) {
-        this.input = input;
+    public SegmentTree(int[] arg) {
+        input = Arrays.copyOf(arg, arg.length);
         size = (int) (Math.pow(2, Math.ceil(Math.log(input.length) / Math.log(2))) * 2) - 1;
         segmentArray = new int[size];
         Arrays.fill(segmentArray, Integer.MAX_VALUE);
